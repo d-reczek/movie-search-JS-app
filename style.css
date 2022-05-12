@@ -40,13 +40,8 @@ input:focus {
   background-color: #659dbdec;
   margin-top: 10px;
   border-radius: var(--main-brd-radius);
-
-  /* background-image: url(./img/pexels-cottonbro-3945317.jpg);
-   background-repeat: no-repeat;
-   background-size: cover; */
 }
 .search-movie {
-  /* background-color: #fff; */
   padding: 10px;
   font-size: 1.2rem;
 }
@@ -88,7 +83,6 @@ input:focus {
 }
 
 .movie-container {
-  /* background-color: grey; */
   padding: 10px;
   font-size: 1.3rem;
   max-width: 350px;
@@ -112,11 +106,8 @@ input:focus {
 }
 .title-contaier {
   background-color: #000;
-  /* text-align: center; */
   border-radius: var(--main-brd-radius) var(--main-brd-radius) 0 0;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
+
   text-align: center;
 }
 
@@ -141,10 +132,8 @@ input:focus {
 
 .img-logo {
   height: 30px;
-  /* justify-self: flex-start; */
 }
 .imdb-link {
-  /* display: inline-block; */
   text-decoration: none;
   color: #fff;
   background-color: #f3c400;
@@ -164,7 +153,6 @@ input:focus {
 
 .rate-container {
   display: flex;
-  /* justify-content: space-evenly; */
   padding: 2px;
 }
 .rate-style {
@@ -191,7 +179,6 @@ input:focus {
     text-align: center;
   }
   .poster-container {
-    /* width: 90%; */
     margin: 0 auto;
     max-width: 340px;
   }

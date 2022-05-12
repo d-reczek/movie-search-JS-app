@@ -9,7 +9,7 @@ function init() {
   const imdbLink = document.getElementById("imdb-link");
   const noMovieDiv = document.querySelector(".no-movie");
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", event => {
     event.preventDefault();
     const inputTitle = document.querySelector(".movie-title").value;
     const inputYear = document.querySelector(".movie-year").value;
@@ -23,7 +23,7 @@ function init() {
         const rating = data.Ratings;
         let rottenRate = "";
         const RT = () => {
-          rating.forEach((element) => {
+          rating.forEach(element => {
             if (element.Source === "Rotten Tomatoes") {
               return (rottenRate = element.Value);
             }
@@ -32,7 +32,7 @@ function init() {
         RT();
         let mCRate = "";
         const MC = () => {
-          rating.forEach((element) => {
+          rating.forEach(element => {
             if (element.Source === "Metacritic") {
               return (mCRate = element.Value);
             }
@@ -62,29 +62,10 @@ function init() {
         console.error(error);
         posterImg.style.display = "none";
         noMovieDiv.style.display = "block";
-
-        // noMovieInformation();
-        // posterImg.style.display = "none";
-        // const errorDiv = document.createElement("div");
-        // errorDiv.classList.add("no-movie");
-        // errorDiv.textContent =
-        //   "Brak takiego filmu, wprowadź rok wydania lub popraw tytuł filmu";
-        // const posterContainer = document.querySelector(".poster-container");
-        // posterContainer.append(errorDiv);
       }
     }
     searchMovies();
     form.reset();
   });
-
-  // function noMovieInformation() {
-  //   // const errorDiv = document.createElement("div");
-  //   // errorDiv.classList.add("no-movie");
-  //   errorDiv.textContent =
-  //     // "Brak takiego filmu, wprowadź rok wydania lub popraw tytuł filmu";
-  //   const posterContainer = document.querySelector(".poster-container");
-  //   posterContainer.append(errorDiv);
-  // }
 }
 window.onload = init;
-// http://www.omdbapi.com/?i=tt7830912&apikey=a8fcf47b
