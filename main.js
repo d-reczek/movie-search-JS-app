@@ -16,10 +16,9 @@ function init() {
     async function searchMovies() {
       try {
         const res = await fetch(
-          `http://www.omdbapi.com/?t=${inputTitle}&y=${inputYear}&apikey=a8fcf47b`
+          `https://www.omdbapi.com/?t=${inputTitle}&y=${inputYear}&apikey=a8fcf47b`
         );
         const data = await res.json();
-        console.log(data);
         const rating = data.Ratings;
         let rottenRate = "";
         const RT = () => {
@@ -45,7 +44,6 @@ function init() {
         const imdbRateValue = data.imdbRating;
         const poster = data.Poster;
         const imdbID = data.imdbID;
-        console.log(imdbID);
         titleSpan.textContent = title;
         relaseDateSpan.textContent = year;
         imdbRateSpan.textContent = imdbRateValue;
@@ -53,7 +51,6 @@ function init() {
         mcRateSpan.textContent = mCRate;
         posterImg.src = poster;
         imdbLink.href = `https://www.imdb.com/title/${imdbID}/`;
-        console.log(imdbLink.href);
         posterImg.style.display = "block";
         noMovieDiv.style.display = "none";
         imdbLink;
